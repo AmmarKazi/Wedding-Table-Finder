@@ -44,7 +44,7 @@ Unfortunately I am unable to find your table number. Please make your way to the
 agent = create_sql_agent(
     agent_type=AgentType.OPENAI_FUNCTIONS,
     llm=llm,
-    verbose= True,
+    #verbose= True,
     #extra_tools= custom_tool_list,
     suffix= custom_suffix,
     toolkit = toolkit
