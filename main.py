@@ -5,9 +5,12 @@ from langchain.agents.agent_toolkits import SQLDatabaseToolkit
 import streamlit as st
 from langchain.callbacks import StreamlitCallbackHandler
 from langchain.sql_database import SQLDatabase
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
-os.environ['OPENAI_API_KEY'] = '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'
+os.environ['OPENAI_API_KEY'] = os.getenv('OPENAI_API_KEY')
 OPENAI_API_KEY = os.environ['OPENAI_API_KEY']
 
 dburi = "sqlite:///seating.db"
