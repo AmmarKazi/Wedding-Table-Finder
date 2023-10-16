@@ -6,8 +6,8 @@ import streamlit as st
 from langchain.callbacks import StreamlitCallbackHandler
 from langchain.sql_database import SQLDatabase
 
-os.environ['OPENAI_API_KEY'] = st.secrets("OPENAI_API_KEY")
-OPENAI_API_KEY = st.secrets('OPENAI_API_KEY')
+#os.environ['OPENAI_API_KEY'] = st.secrets("OPENAI_API_KEY")
+#OPENAI_API_KEY = st.secrets('OPENAI_API_KEY')
 
 dburi = "sqlite:///seating.db"
 db = SQLDatabase.from_uri(dburi)
