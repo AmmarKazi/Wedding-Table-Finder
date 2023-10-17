@@ -79,28 +79,6 @@ agent = create_sql_agent(
 #for name in names_array:
 #    agent.run(name)
 
-def set_bg_hack_url():
-    '''
-    A function to unpack an image from url and set as bg.
-    Returns
-    -------
-    The background.
-    '''
-
-    st.markdown(
-        f"""
-         <style>
-         .stApp {{
-             background: url("https://cdn.pixabay.com/photo/2020/02/20/17/57/flower-4865379_1280.png");
-             background-size: cover
-         }}
-         </style>
-         """,
-        unsafe_allow_html=True
-    )
-set_bg_hack_url()
-
-
 st.markdown("<h1 style='text-align: center; color: black; font-family: Snell Roundhand; font-size: 60px'>Welcome to the Wedding of Umer Salman and Ayesha Raza</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center; color: black; font-family: American Typewriter; font-weight: 400'>Please enter your FIRST and LAST Name below to find your table number</h3>", unsafe_allow_html=True)
 
