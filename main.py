@@ -15,31 +15,12 @@ import csv
 #os.environ['OPENAI_API_KEY'] = os.getenv("OPENAI_API_KEY")
 #OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
-dburi = "sqlite:///test.db"
+dburi = "sqlite:///metadata.db"
 db = SQLDatabase.from_uri(dburi)
 
 llm = ChatOpenAI(temperature = 0, model_name = "gpt-3.5-turbo")
 toolkit = SQLDatabaseToolkit(llm = llm, db = db)
 set_llm_cache(SQLiteCache(database_path=".cache.db"))
-
-###
-csv_file = "Seating Sample List.csv"
-names_array = []
-
-# Open the CSV file
-with open(csv_file, newline='') as csvfile:
-    reader = csv.DictReader(csvfile)
-
-    # Get the field names and remove leading/trailing whitespace
-    fieldnames = [field.strip() for field in reader.fieldnames]
-
-    # Iterate through each row in the CSV
-    for row in reader:
-        first_name = row[fieldnames[0]]
-        last_name = row[fieldnames[1]]
-        full_name = f"{first_name} {last_name}"
-
-        names_array.append(full_name)
 
 
 custom_suffix = """
