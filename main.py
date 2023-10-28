@@ -64,6 +64,7 @@ css = '''
 <style>
 section.main > div:has(~ footer ) {
     padding-bottom: 5px;
+    padding-top: 10px;
 }
 </style>
 '''
