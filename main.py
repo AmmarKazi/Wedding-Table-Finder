@@ -60,14 +60,6 @@ agent = create_sql_agent(
 #for name in names_array:
 #    agent.run(name)
 
-st.markdown("""
-        <style>
-               .block-container {
-                    padding-top: 1rem;
-                    padding-bottom: 0rem;
-                }
-        </style>
-        """, unsafe_allow_html=True)
 
 st.markdown("<h1 style='text-align: center; color: black; font-family: Snell Roundhand; font-size: 40px'>Welcome to the Wedding of Umer Salman and Ayesha Raza</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center; color: black; font-family: American Typewriter; font-size: 22px; font-weight: 400'>Please enter your FIRST and LAST Name below to find your table number. Eg. Umer Salman</h3>", unsafe_allow_html=True)
