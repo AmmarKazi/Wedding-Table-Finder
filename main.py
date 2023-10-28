@@ -60,15 +60,16 @@ agent = create_sql_agent(
 #for name in names_array:
 #    agent.run(name)
 
-css = '''
-<style>
-section.main > div:has(~ footer ) {
-    padding-bottom: 5px;
-    padding-top: 10px;
-}
-</style>
-'''
-st.markdown(css, unsafe_allow_html=True)
+st.markdown("""
+        <style>
+               .block-container {
+                    padding-top: 1rem;
+                    padding-bottom: 0rem;
+                    padding-left: 5rem;
+                    padding-right: 5rem;
+                }
+        </style>
+        """, unsafe_allow_html=True)
 
 st.markdown("<h1 style='text-align: center; color: black; font-family: Snell Roundhand; font-size: 40px'>Welcome to the Wedding of Umer Salman and Ayesha Raza</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center; color: black; font-family: American Typewriter; font-size: 22px; font-weight: 400'>Please enter your FIRST and LAST Name below to find your table number</h3>", unsafe_allow_html=True)
