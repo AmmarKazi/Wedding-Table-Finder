@@ -1,6 +1,6 @@
 import os
 from langchain.chat_models import ChatOpenAI
-from langchain.agents import AgentType, create_sql_agent, create_csv_agent
+from langchain.agents import AgentType, create_sql_agent
 from langchain.agents.agent_toolkits import SQLDatabaseToolkit
 import streamlit as st
 from langchain.callbacks import StreamlitCallbackHandler
